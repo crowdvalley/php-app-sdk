@@ -1,0 +1,37 @@
+{
+    "name":         "crowdvalley/php-app-sdk",
+    "type":         "symfony-bundle",
+    "description":  "Crowd Valley SDK for PHP Symfony projects",
+    "keywords":     ["client"],
+    "homepage":     "http://www.crowdvalley.com",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Crowd Valley",
+            "email":    "info@crowdvalley.com"
+        },
+        {
+            "name":     "The contributors",
+            "homepage": "https://github.com/crowdvalley/CrowdValleyClientBundle/contributors"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/crowdvalley/authentication-bundle"
+        }
+    ],
+    "require":      {
+        "symfony/framework-bundle": "2.*",
+        "misd/guzzle-bundle": "~1.1",
+        "crowdvalley/auth-bundle": "1.0.0"
+    },
+    "require-dev": {
+        "symfony/yaml": "2.*",
+        "symfony/console": "2.*",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-4": { "CrowdValley\\Bundle\\ClientBundle\\": "" }
+    }
+}

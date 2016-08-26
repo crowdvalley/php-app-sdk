@@ -1,0 +1,156 @@
+services:
+     utility.api_manager:
+        class: CrowdValley\Bundle\ClientBundle\Utility\ApiManager
+
+     utility.data_converter:
+        class: CrowdValley\Bundle\ClientBundle\Utility\DataConverter
+
+     self:
+        class: CrowdValley\Bundle\ClientBundle\Service\LoggedInUserService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+    
+     user:
+        class: CrowdValley\Bundle\ClientBundle\Service\UserService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     authenticate:
+        class: CrowdValley\Bundle\ClientBundle\Service\AuthenticateService
+        arguments: [@service_container, %cv_api_endpoint%, %cv_api_key%, %cv_api_secret%, @session]
+               
+     organization:
+        class: CrowdValley\Bundle\ClientBundle\Service\OrganizationService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     offering:
+        class: CrowdValley\Bundle\ClientBundle\Service\OfferingService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+           
+     document:
+        class: CrowdValley\Bundle\ClientBundle\Service\DocumentService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+           
+     investment:
+        class: CrowdValley\Bundle\ClientBundle\Service\InvestmentService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+                   
+     deal_room:
+        class: CrowdValley\Bundle\ClientBundle\Service\DealRoomService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+           
+     public:
+        class: CrowdValley\Bundle\AuthBundle\Service\PublicService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - %cv_api_key%
+           - %cv_api_secret%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     topic:
+        class: CrowdValley\Bundle\ClientBundle\Service\TopicService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     post:
+        class: CrowdValley\Bundle\ClientBundle\Service\PostService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     wallet:
+        class: CrowdValley\Bundle\ClientBundle\Service\WalletService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     payout:
+        class: CrowdValley\Bundle\ClientBundle\Service\PayoutService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     transaction:
+        class: CrowdValley\Bundle\ClientBundle\Service\TransactionService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     reyker:
+        class: CrowdValley\Bundle\ClientBundle\Service\ReykerService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     veridu:
+        class: CrowdValley\Bundle\ClientBundle\Service\VeriduService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
+
+     gbgroup:
+        class: CrowdValley\Bundle\ClientBundle\Service\GBGroupService
+        arguments:
+           - @service_container
+           - %cv_api_endpoint%
+           - @session
+           - @utility.api_manager
+           - @utility.data_converter
