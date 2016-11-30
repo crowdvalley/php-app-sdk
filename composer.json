@@ -24,7 +24,7 @@
     "require":      {
         "symfony/framework-bundle": "2.*",
         "misd/guzzle-bundle": "~1.1",
-        "crowdvalley/auth-bundle": "1.0.0"
+        "crowdvalley/auth-bundle": "dev-master"
     },
     "require-dev": {
         "symfony/yaml": "2.*",
